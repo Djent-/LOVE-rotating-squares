@@ -27,10 +27,10 @@ end
 
 function square:new(x,y)
 	local self = {}
-	self.x = x
-	self.y = y
-	self.w = 20
-	self.h = 20
+	self.x = x - 20
+	self.y = y - 20
+	self.w = 40
+	self.h = 40
 	self.angle = 0
 	return self
 end
