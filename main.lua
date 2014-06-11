@@ -7,14 +7,14 @@ function love.load()
 end
 
 function love.update(dt)
-	if squares = {} then return end
+	if #squares == 0 then return end
 	for x = 1, #squares do
 		squares[x].angle = squares[x].angle + math.pi/60
 	end
 end
 
 function love.draw()
-	if squares = {} then return end
+	if #squares == 0 then return end
 	for x = 1, #squares do
 		love.graphics.rectangle(squares[x].x,squares[x].y, squares[x].w,
 			squares[x].h)
