@@ -16,7 +16,8 @@ end
 function love.draw()
 	if #squares == 0 then return end
 	for x = 1, #squares do
-		love.graphics.draw(squares[x].canvas, squares[x].x, squares[x].y, squares[x].angle)
+		love.graphics.draw(squares[x].canvas, squares[x].x, squares[x].y,
+			squares[x].angle, 1, 1, squares[x].w/2, squares[x].h/2)
 	end
 end
 
@@ -26,8 +27,8 @@ end
 
 function square:new(x,y)
 	local self = {}
-	self.x = x - 20
-	self.y = y - 20
+	self.x = x
+	self.y = y
 	self.w = 40
 	self.h = 40
 	self.angle = 0
